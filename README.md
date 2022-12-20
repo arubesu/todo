@@ -1,34 +1,110 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="./src/assets/ignite-logo.svg" alt=""></a>
+</p>
 
-## Getting Started
+<h1 align="center">
+   <a href="#"> Todo  </a>
+</h1>
 
-First, run the development server:
+<h3 align="center">
+All tasks are todo!
+</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/arubesu/todo.svg)](https://github.com/arubesu/todo/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/arubesu/todo.svg)](https://github.com/arubesu/todo/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+---
+
+<p align="center"> 
+All tasks are todo!
+    <br> 
+</p>
+
+## 📝 Table of Contents
+
+- [📝 Table of Contents](#-table-of-contents)
+- [🧐 About ](#-about-)
+- [🎴 Layout](#-layout)
+- [🏁 Getting Started ](#-getting-started-)
+  - [Prerequisites](#prerequisites)
+  - [Installing](#installing)
+- [⛏️ Built Using ](#️-built-using-)
+- [🤝 How to contribute](#-how-to-contribute)
+- [🎉 Acknowledgements ](#-acknowledgements-)
+
+## 🧐 About <a name = "about"></a>
+
+A simple react project of a beautiful todo tasks 
+
+## 🎴 Layout
+
+The application layout is available on Figma:
+
+<a href="https://www.figma.com/file/iOEYjaGA3l6GoSVkf4AoV4/ToDo-List-(Copy)?node-id=0%3A1&t=f2YyeNqJbQegqShi-0">
+  <img alt="Figma Layout" src="https://img.shields.io/badge/Layout%20-Figma-%2304D361">
+</a>
+
+ <img  alt="Home Page"  title="#HomePage"  src="https://raw.githubusercontent.com/arubesu/todo/main/screenshots/1.png"  width="400px">
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+
+### Prerequisites
+Before you begin, you will need to have the following tools installed on your machine: [Git](https://git-scm.com). In addition, it is good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/).
+
+``` bash
+# Clone this repository
+git clone git@github.com:arubesu/todo.git
+
+# Access the project folder cmd/terminal
+cd todo
+
+```
+
+---
+
+### Installing
+
 
 ```bash
-npm run dev
-# or
+# install the dependencies
+yarn install
+
+# run the fake db
+yarn json-server --watch db.json
+
+# Run the application in development mode
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## ⛏️ Built Using <a name = "built_using"></a>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- [React](https://reactjs.org/) 
+- [Next js](nextjs.org/) 
+- [Typescript](https://www.typescriptlang.org) 
+---
+## 🤝 How to contribute
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Fork the project.
+2. Create a new branch with your changes: `git checkout -b my-feature`
+3. Save your changes and create a commit message telling you what you did: `git commit -m" feature: My new feature "`
+4. Submit your changes: `git push origin my-feature`
+> If you have any questions check this [guide on how to contribute](https://github.com/firstcontributions/first-contributions)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- References: Rocketseat bootcamp 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with ❤️  by Bruno Souza 👋🏽 [Get in Touch!](https://www.linkedin.com/in/bruno-a-souza/)
