@@ -1,22 +1,29 @@
+import { ChangeEvent, useState } from 'react';
 import { Trash2 } from 'react-feather';
 import styles from './TaskItem.module.css';
 import { TaskItem as TaskItemType } from './TaskList';
 
 interface TaskItemProps {
     task: TaskItemType;
-    onCompleteTask: (task: TaskItemType) => void;
+    onToggleTaskStatus: (task: TaskItemType) => void;
     onDeleteTask: (taskID: string) => void;
 }
 
 export const TaskItem: React.FC<TaskItemProps> = ({
     task,
-    onCompleteTask,
+    onToggleTaskStatus,
     onDeleteTask,
 }) => {
+    const handleChange = () => {
+        onToggleTaskStatus(task)
+    };
+
     const {
         description,
         id
     } = task;
+
+    const taskDescriptionStyle = task.isDone ? styles.done : styles.todo;
 
     return (
         <li
@@ -24,10 +31,17 @@ export const TaskItem: React.FC<TaskItemProps> = ({
             className={styles.listItem}>
             <div className={styles.taskDescriptionContainer}>
                 <label className={styles.checkboxContainer}>
-                    <input type="checkbox" name="task" id="" />
+                    <input
+                        value={task.id}
+                        checked={task.isDone}
+                        onChange={handleChange}
+                        type="checkbox"
+                        name="task"
+                        id=""
+                    />
                     <span className={styles.checkmark}></span>
                 </label>
-                <p className={styles.taskDescription}>
+                <p className={[styles.taskDescription, taskDescriptionStyle].join(' ')}>
                     {
                         description
                     }

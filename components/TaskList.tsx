@@ -13,13 +13,13 @@ export type TaskItem = {
 
 interface TaskListProps {
     tasks: TaskItem[];
-    onCompleteTask: (task: TaskItem) => void;
+    onToggleTaskStatus: (task: TaskItem) => void;
     onDeleteTask: (taskId: string) => void;
 }
 
 export const TaskList: React.FC<TaskListProps> = ({
     tasks,
-    onCompleteTask,
+    onToggleTaskStatus,
     onDeleteTask,
 }) => {
 
@@ -35,7 +35,7 @@ export const TaskList: React.FC<TaskListProps> = ({
             <TaskItem
                 key={id}
                 task={task}
-                onCompleteTask={onCompleteTask}
+                onToggleTaskStatus={onToggleTaskStatus}
                 onDeleteTask={onDeleteTask}
             />
         )

@@ -33,14 +33,14 @@ export const TaskArea: React.FC = () => {
         ]);
     }
 
-    const handleCompleteTask = (task: TaskItem) => {
+    const handleToggleTaskStatus = (task: TaskItem) => {
         const taskCompletedIndex = tasks.findIndex(t => t.id === task.id);
 
         let newTasks = [...tasks];
 
         newTasks[taskCompletedIndex] = {
             ...task,
-            isDone: true,
+            isDone: !task.isDone,
         }
 
         setTasks(newTasks);
@@ -80,7 +80,7 @@ export const TaskArea: React.FC = () => {
                 <hr />
                 <TaskList
                     tasks={tasks}
-                    onCompleteTask={handleCompleteTask}
+                    onToggleTaskStatus={handleToggleTaskStatus}
                     onDeleteTask={handleDeleteTask}
                 />
             </section>
