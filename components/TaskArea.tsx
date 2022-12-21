@@ -8,11 +8,11 @@ export const TaskArea: React.FC = () => {
             <div className={styles.tasksStatusContainer}>
                 <div className={styles.createdTasksContainer}>
                     <p>Created Tasks</p>
-                    <span className={styles.tasksCounter}>0</span>
+                    <span className={styles.tasksCounter}>5</span>
                 </div>
                 <div className={styles.doneTasksContainer}>
                     <p>Done</p>
-                    <span className={styles.tasksCounter}>0</span>
+                    <span className={styles.tasksCounter}>2 of 5</span>
                 </div>
             </div>
             <hr />
