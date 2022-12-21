@@ -93,10 +93,6 @@
     line-height: 1.5rem;
 }
 
-.tasksListContainer .icon{
-    margin-bottom: 1rem;
-}
-
 .tasksListContainer p:nth-of-type(1){
     font-weight: 700;
     line-height: 140%;

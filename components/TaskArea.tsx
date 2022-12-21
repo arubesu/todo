@@ -1,6 +1,7 @@
 import styles from './TaskArea.module.css';
 import clipBoardImg from '../public/Clipboard.svg'
 import Image from 'next/image';
+import { EmptyTaskBox } from './EmptyTaskBox';
 
 export const TaskArea: React.FC = () => {
     return (
@@ -19,16 +20,7 @@ export const TaskArea: React.FC = () => {
             <hr />
 
             <div className={styles.tasksListContainer}>
-                <Image
-                    className={styles.icon}
-                    alt='Clipboard Image'
-                    src={clipBoardImg}
-                    height={56}
-                    width={56}
-                />
-
-                <p>You still have no tasks registered</p>
-                <p>Create tasks and organize your life</p>
+                <EmptyTaskBox />
             </div>
         </section>
     )
