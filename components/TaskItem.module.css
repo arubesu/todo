@@ -15,8 +15,17 @@
     border-radius: 8px;
 }
 
-.listItem p{
+.listItem svg:hover {
+    color: var(--danger);
+    cursor: pointer;
+}
+
+.listItem .taskDescription{
     text-align: start;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 140%;
+    color: var(--gray-100);
 }
 
 /* Hide the browser's default checkbox */

@@ -15,8 +15,8 @@ export const EmptyTaskBox: React.FC = () => {
                 width={56}
             />
 
-            <p>You still have no tasks registered</p>
-            <p>Create tasks and organize your life</p>
+            <p className={styles.emptyMessage}>You still have no tasks registered</p>
+            <p className={styles.emptyMessage}>Create tasks and organize your life</p>
         </>
     );
 }

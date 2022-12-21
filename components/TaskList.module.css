@@ -7,7 +7,7 @@
     line-height: 1.5rem;
 }
 
-.tasksListContainer p:nth-of-type(1){
+.tasksListContainer .emptyMessage p:nth-of-type(1){
     font-weight: 700;
     line-height: 140%;
     text-align: center;
@@ -15,7 +15,7 @@
     margin-bottom: .5rem;
 }
 
-.tasksListContainer p:nth-of-type(2){
+.tasksListContainer .emptyMessage p:nth-of-type(2){
     line-height: 140%;
     text-align: center;
     color: var(--gray-300);

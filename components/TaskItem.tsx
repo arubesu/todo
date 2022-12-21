@@ -20,7 +20,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
                 <input type="checkbox" name="task" id="" />
                 <span className={styles.checkmark}></span>
             </label>
-            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <p className={styles.taskDescription}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
             <Trash2 width={24} height={24} />
         </li>
     )
