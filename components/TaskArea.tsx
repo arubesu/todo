@@ -1,7 +1,5 @@
 import styles from './TaskArea.module.css';
-import clipBoardImg from '../public/Clipboard.svg'
-import Image from 'next/image';
-import { EmptyTaskBox } from './EmptyTaskBox';
+import { TaskList } from './TaskList';
 
 export const TaskArea: React.FC = () => {
     return (
@@ -18,10 +16,7 @@ export const TaskArea: React.FC = () => {
                 </div>
             </div>
             <hr />
-
-            <div className={styles.tasksListContainer}>
-                <EmptyTaskBox />
-            </div>
+            <TaskList />
         </section>
     )
 }
