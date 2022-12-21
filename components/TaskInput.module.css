@@ -13,8 +13,8 @@
     padding: 1rem;
     gap: .5rem;
 
-    max-width: 39.875rem;
-    max-height: 3.375rem;
+    width: 46rem;
+    height: 3.375rem;
 
     background:  var(--gray-500);
     border: 1px solid var(--gray-700);;
