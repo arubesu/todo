@@ -1,18 +1,13 @@
 import { Header } from '../components/Header'
+import { TaskInput } from '../components/TaskInput'
 import styles from '../styles/Home.module.css'
-
-
-
 
 export default function Home() {
   return (
     <>
       <Header />
       <main>
-        <div>
-          <input type="text" name="add-task" id="add-task" placeholder='Add a new task' />
-          <button></button>
-        </div>
+        <TaskInput />
 
         <section>
           <div>

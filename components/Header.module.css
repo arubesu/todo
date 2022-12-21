@@ -2,6 +2,7 @@
     background-color: var(--gray-700);
     display: flex;
     justify-content: center;
+   align-items: center;
     padding: 1.25rem 0;
     max-height: 12.5rem;
 }
