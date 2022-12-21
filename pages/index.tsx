@@ -1,9 +1,13 @@
+import { Header } from '../components/Header'
 import styles from '../styles/Home.module.css'
+
+
+
 
 export default function Home() {
   return (
     <>
-      <header>HEADER</header>
+      <Header />
       <main>
         <div>
           <input type="text" name="add-task" id="add-task" placeholder='Add a new task' />
