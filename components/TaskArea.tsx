@@ -16,9 +16,7 @@ export const TaskArea: React.FC = () => {
                     <span className={styles.tasksCounter}>0</span>
                 </div>
             </div>
-
             <hr />
-
             <Image
                 alt='Clipboard Image'
                 src={clipBoardImg}

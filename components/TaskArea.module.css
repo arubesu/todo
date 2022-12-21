@@ -3,16 +3,23 @@
     flex-direction: column;
     padding: 0px;
     gap: 1.5rem;
-/* 
-    max-width: 46rem;
-    max-height: 17.9375rem; */
-
     align-items: center;
     justify-content: center;
     margin-top: 4rem;
 }
 
-.tasksContainer{
+.container hr{
+    width: 51rem;
+    display: flex;
+    justify-content: space-between;
+    height: 1px;
+    background-color: var(--gray-500);
+    border: none;
+    margin-right: 1rem;
+}
+
+.tasksContainer {
+    width: 52rem;
     display: flex;
     justify-content: space-between;
     gap: 35.0625rem;
