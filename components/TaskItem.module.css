@@ -3,6 +3,7 @@
     padding: 1rem;
 
     align-items: flex-start;
+    justify-content: space-between;
     gap: 0.75rem;
 
     width: 46rem;
@@ -116,4 +117,9 @@
 .done {
   background: var(--purple-dark);
   border: 2px solid var(--purple-dark);
+}
+
+.taskDescriptionContainer{
+  display: flex;
+  gap: 1rem;
 }

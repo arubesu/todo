@@ -1,3 +1,16 @@
+.emptyMessage {
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+    color: var(--gray-300);
+    margin-bottom: .5rem;
+}
+
+.emptyMessage + .emptyMessage {
+    font-weight: normal;
+    color: var(--gray-300);
+}
+
 .icon{
     margin-bottom: 1rem;
 }

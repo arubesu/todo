@@ -1,27 +1,39 @@
 import { Trash2 } from 'react-feather';
 import styles from './TaskItem.module.css';
+import { TaskItem as TaskItemType } from './TaskList';
 
 interface TaskItemProps {
-    isDone: boolean;
-    description: string;
+    task: TaskItemType;
+    onCompleteTask: (task: TaskItemType) => void;
+    onDeleteTask: (taskID: string) => void;
 }
 
 export const TaskItem: React.FC<TaskItemProps> = ({
-    description,
-    isDone
+    task,
+    onCompleteTask,
+    onDeleteTask,
 }) => {
-    const checkMarkStyle = isDone ? styles.done : styles.todo;
+    const {
+        description,
+        id
+    } = task;
 
     return (
         <li
             key={description}
             className={styles.listItem}>
-            <label className={styles.checkboxContainer}>
-                <input type="checkbox" name="task" id="" />
-                <span className={styles.checkmark}></span>
-            </label>
-            <p className={styles.taskDescription}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-            <Trash2 width={24} height={24} />
+            <div className={styles.taskDescriptionContainer}>
+                <label className={styles.checkboxContainer}>
+                    <input type="checkbox" name="task" id="" />
+                    <span className={styles.checkmark}></span>
+                </label>
+                <p className={styles.taskDescription}>
+                    {
+                        description
+                    }
+                </p>
+            </div>
+            <Trash2 width={24} height={24} onClick={() => onDeleteTask(id)} />
         </li>
     )
 }

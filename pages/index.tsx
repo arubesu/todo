@@ -8,7 +8,6 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <TaskInput />
         <TaskArea />
       </main>
     </>
