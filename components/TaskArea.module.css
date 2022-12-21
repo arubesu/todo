@@ -18,7 +18,7 @@
     margin-right: 1rem;
 }
 
-.tasksContainer {
+.tasksStatusContainer {
     width: 52rem;
     display: flex;
     justify-content: space-between;
@@ -82,4 +82,31 @@
 
     background: var(--gray-400);
     border-radius: 999px;
+}
+
+.tasksListContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    line-height: 1.5rem;
+}
+
+.tasksListContainer .icon{
+    margin-bottom: 1rem;
+}
+
+.tasksListContainer p:nth-of-type(1){
+    font-weight: 700;
+    line-height: 140%;
+    text-align: center;
+    color: var(--gray-300);
+    margin-bottom: .5rem;
+}
+
+.tasksListContainer p:nth-of-type(2){
+    line-height: 140%;
+    text-align: center;
+    color: var(--gray-300);
 }
