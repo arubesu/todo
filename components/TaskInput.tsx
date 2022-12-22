@@ -1,4 +1,4 @@
-import React, { ChangeEvent, InputHTMLAttributes } from 'react';
+import React, { ChangeEvent, InputHTMLAttributes, KeyboardEventHandler } from 'react';
 
 import styles from './TaskInput.module.css';
 import { PlusCircle } from "react-feather";
@@ -20,15 +20,24 @@ export const TaskInput: React.FC<TaskInputProps> = ({
     onAddNewTask,
     onTaskChange,
 }) => {
+
+    const onKeyDown = (event: { key: string; }) => {
+        if (event.key === 'Enter') {
+            onAddNewTask();
+        }
+    }
+
     return (
         <div className={styles.container}>
             <input
                 type="text"
                 name="add-task"
+                value={content}
                 id="add-task"
                 placeholder='Add a new task'
                 onChange={onTaskChange}
                 maxLength={150}
+                onKeyDown={onKeyDown}
             />
             <button onClick={onAddNewTask} >
                 Add

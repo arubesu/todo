@@ -42,7 +42,7 @@ export const TaskArea: React.FC = () => {
         }
     )
 
-    const updateTasks = (tasks: TaskItem[]) => {
+    const updateTasks = (tasks: TaskItem[], callback?: () => void) => {
         setTasks(tasks);
         addTasksToStorage(tasks);
     }
@@ -54,6 +54,7 @@ export const TaskArea: React.FC = () => {
         ];
 
         updateTasks(newTasks);
+        setNewTask('')
     }
 
     const handleToggleTaskStatus = (task: TaskItem) => {
