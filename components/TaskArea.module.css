@@ -9,7 +9,7 @@
 }
 
 .container hr{
-    width: 51rem;
+    width: 51rem; 
     display: flex;
     justify-content: space-between;
     height: 1px;
@@ -78,4 +78,16 @@
 
     background: var(--gray-400);
     border-radius: 999px;
+}
+
+@media (max-width:600px){
+    .container hr {
+        display: flex;
+        margin:0 1rem;
+        width: 100%;
+    }
+
+    .tasksStatusContainer {
+     width: 100%;
+    }
 }

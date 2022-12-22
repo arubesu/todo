@@ -129,3 +129,9 @@
   display: flex;
   gap: 1rem;
 }
+
+@media (max-width:600px){
+    .listItem {
+      width: 100%;
+    }
+}

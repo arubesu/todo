@@ -49,3 +49,7 @@ a {
 button {
   cursor: pointer;
 }
+
+main {
+  padding: 0 1rem;
+}
