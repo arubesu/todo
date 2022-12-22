@@ -34,6 +34,10 @@ export const TaskArea: React.FC = () => {
         setNewTask(task);
     }
 
+    const sortByTasksTodo = (tasksToSort: TaskItem[]) => {
+        return tasksToSort.sort((a, b) => a.isDone ? 1 : -1);
+    }
+
     const createNewTask = (description: string) => (
         {
             id: crypto.randomUUID(),
@@ -67,7 +71,7 @@ export const TaskArea: React.FC = () => {
             isDone: !task.isDone,
         }
 
-        updateTasks(newTasks);
+        updateTasks(sortByTasksTodo(newTasks));
     }
 
     const handleDeleteTask = (taskId: string) => {
