@@ -1,8 +1,9 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import styles from './TaskArea.module.css';
 import { TaskInput } from './TaskInput';
 import { TaskItem, TaskList } from './TaskList';
 
+const APP_STORAGE_KEY = "todo-app:tasks";
 
 export const TaskArea: React.FC = () => {
 
@@ -12,6 +13,21 @@ export const TaskArea: React.FC = () => {
     const createdTasksCount = tasks.length;
     const doneTasksCount = tasks.filter(t => t.isDone).length;
     const isEmptyTask = tasks.length === 0;
+
+    useEffect(() => {
+        const tasksFromStorage = loadTasksFromStorage();
+        console.log('Loaded : ' + tasksFromStorage)
+        setTasks(tasksFromStorage)
+    }, [])
+
+    const loadTasksFromStorage = () => {
+        const tasksLoadedJSON = localStorage.getItem(APP_STORAGE_KEY);
+        return tasksLoadedJSON ? JSON.parse(tasksLoadedJSON) : [];
+    }
+
+    const addTasksToStorage = (tasks: TaskItem[]) => {
+        localStorage.setItem(APP_STORAGE_KEY, JSON.stringify(tasks));
+    }
 
     const handleNewTaskChange = (event: ChangeEvent<HTMLInputElement>) => {
         const task = event.target.value;
@@ -26,11 +42,18 @@ export const TaskArea: React.FC = () => {
         }
     )
 
+    const updateTasks = (tasks: TaskItem[]) => {
+        setTasks(tasks);
+        addTasksToStorage(tasks);
+    }
+
     const handleAddNewTask = () => {
-        setTasks([
+        const newTasks = [
             ...tasks,
             createNewTask(newTask)
-        ]);
+        ];
+
+        updateTasks(newTasks);
     }
 
     const handleToggleTaskStatus = (task: TaskItem) => {
@@ -43,12 +66,12 @@ export const TaskArea: React.FC = () => {
             isDone: !task.isDone,
         }
 
-        setTasks(newTasks);
+        updateTasks(newTasks);
     }
 
     const handleDeleteTask = (taskId: string) => {
         const tasksWithoutDeletedOne = tasks.filter(t => t.id !== taskId);
-        setTasks(tasksWithoutDeletedOne);
+        updateTasks(tasksWithoutDeletedOne);
     }
 
     return (
