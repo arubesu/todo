@@ -13,3 +13,13 @@
     flex-direction: column;
     gap: 0.75rem;
 }
+
+@media (max-width:600px){
+    .tasksListContainer  {
+        width: 100%;
+    }
+
+    .tasksListContainer ul {
+         width: 100%;
+    }
+}
