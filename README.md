@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="./src/assets/ignite-logo.svg" alt=""></a>
+ <img width=200px height=200px src="./public/logo.svg" alt=""></a>
 </p>
 
 <h1 align="center">
@@ -51,7 +51,7 @@ The application layout is available on Figma:
   <img alt="Figma Layout" src="https://img.shields.io/badge/Layout%20-Figma-%2304D361">
 </a>
 
- <img  alt="Home Page"  title="#HomePage"  src="https://raw.githubusercontent.com/arubesu/todo/main/screenshots/1.png"  width="400px">
+ <img  alt="Home Page"  title="#HomePage"  src="screenshots/1.png"  width="400px">
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -78,8 +78,6 @@ cd todo
 # install the dependencies
 yarn install
 
-# run the fake db
-yarn json-server --watch db.json
 
 # Run the application in development mode
 yarn dev
